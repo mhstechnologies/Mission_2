@@ -60,6 +60,13 @@ h3 {
   margin-bottom: 0;
 }
 
+h4 {
+  font-family: "Caveat", cursive;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 10px;
+}
+
 .content_wrap {
   max-width: 800px;
   width: 85%;
@@ -172,6 +179,13 @@ input[type="submit"] {
 
 select {
   margin: 10px 10px;
+}
+
+.web_counter {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: right;
 }
 
 /* Responsive
