@@ -188,6 +188,15 @@ select {
   text-align: right;
 }
 
+/* Thank you
+------------------------------------------------------*/
+#thank_you {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
 /* Responsive
 ------------------------------------------------------*/
 @media screen and (min-width: 750px) {

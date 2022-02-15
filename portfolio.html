@@ -8,14 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="./scripts/portfolio.js"></script>
+    <script src="./scripts/portfolio.js" defer></script>
   </head>
   <body>
     <main>
       <!-- ***********************  ABOUT / PROFILE  *********************** -->
       <header>
         <div class="content_wrap">
-        <h1>Mario Santos</h1>
+        <h1 onmouseover="">Mario Santos</h1>
         <h2>Business Owner</h2>
 
         <p>Business owner with 15+ years of wide and solid professional experience in product development.
@@ -41,9 +41,10 @@
           <!-- Project RoadMap -->
           <section class="project_item">
             <img src="./images/logo.jpg" alt="company_logo">
-            <h3>Web Design</h3>
+            <h3 id="projectName">Web Design</h3>
             <p>Summary or description of the project and/or your role in it. Add as many paragraphs as required.</p>
-            <a class ="btn" href="#" target="_blank">View project </a>
+            <!--- <a class ="btn" href="#" target="_blank">View project </a> -->
+            <button class="btn" onclick="changeProject()">View Project</button>
           </section>
         <!-- End of Project block. -->
         </div>
@@ -132,7 +133,7 @@
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
       <footer>
-        <form>
+        <form onsubmit="return false"> 
           <div class="content_wrap">
             <h2>Let's Keep in Touch!</h2>
             <label>Name:</label><input type="text" placeholder="Full Name" /> <br />
@@ -147,22 +148,25 @@
             </select>
             <br />
             <textarea name="Comments"></textarea>  <br />
-            <input type="submit" value="Submit" /> <br />
-          </div>
-          <div class="web_counter">
-            <h4>Number of Visitors</h4>
-              <span id="counter"><script >
-                let counter = localStorage.getItem('on_page_load');
-                if (null === counter) {
-                  counter = 0;
-                }
- 
-                counter++;
-                localStorage.setItem("on_page_load", counter);
-                document.getElementById('counter').innerHTML = counter;
-              </script></span>
+            <input type="submit" value="Submit" onclick="renderImage()"/> <br />
           </div>
         </form>
+        <div></div>
+          <img src="./images/usedcarguys-thank-you.png" alt="reply_soon" id="thank_you" style="display: none;" />
+        </div>
+        <div class="web_counter">
+          <h4>Number of Visitors</h4>
+            <span id="counter"><script >
+              let counter = localStorage.getItem('on_page_load');
+              if (null === counter) {
+                counter = 0;
+              }
+ 
+              counter++;
+              localStorage.setItem("on_page_load", counter);
+              document.getElementById('counter').innerHTML = counter;
+            </script></span>
+        </div>
       </footer>
     </main>
   </body>
